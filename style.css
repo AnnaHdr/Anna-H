@@ -1,0 +1,443 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1em 3em;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(100, 100, 100, 0.2);
+    background-image: linear-gradient(to right, orange, rgb(255, 219, 41));
+    letter-spacing: 1px;
+
+}
+
+#container {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 1em 1.5em 1em 40%;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+header a {
+    padding: 1em;
+    font-size: 1.2em;
+    flex-basis: 25%;
+    text-align: right;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+#logo {
+    background-image: url(./tlo.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+}
+
+#logo h1 {
+    color: orange;
+    margin: 0;
+    font-size: 8em;
+    padding-top: 1em;
+    line-height: 2em;
+    text-shadow: 1px 1px 15px black;
+}
+
+#logo span {
+    font-size: 3.5em;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+    margin-top: 10%;
+}
+
+#logo .icons {
+    font-size: 2em;
+    margin-top: 1em;
+    color: white;
+    display: flex;
+}
+
+#logo .icons i {
+    padding: 1em;
+    text-shadow: 0 0 2px black, 0 0 10px orange;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em;
+}
+
+#links p {
+    font-size: 3em;
+    line-height: 1.3em;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+#links a {
+    margin: 0 10%;
+}
+
+#about,
+#skills {
+    position: relative;
+    display: flex;
+    margin-top: 2em;
+}
+
+#about .background,
+#skills .background {
+    background-color: #f5f6fa;
+    position: absolute;
+    display: block;
+    line-height: 1.6em;
+    padding: .3em 1.1em;
+    font-weight: bold;
+    font-size: 2em;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#about .profile,
+#skills .profile {
+    position: relative;
+    background-color: white;
+    margin: 4em 1em 3em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0.2em 0.2em 0.4em #ddd;
+    z-index: 20;
+}
+
+#about .profile .me {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+#about .profile .me img {
+    width: 15%;
+    border: 1px solid #848484;
+    border-radius: 50%;
+    margin: 3em 5%;
+    box-shadow: 0.2em 0.2em 0.4em #ddd;
+}
+
+#about .profile .me .info {
+    margin: 2em 1em 1em 0;
+}
+
+#about .profile .me .info span {
+    display: block;
+    flex-grow: 1;
+    font-size: 1.4em;
+    line-height: 1.7em;
+    color: orange;
+    white-space: nowrap;
+}
+
+#about .profile .me .info span b {
+    font-weight: bold;
+    margin-right: 0.5em;
+    color: black;
+}
+
+#about .profile .cv {
+    position: relative;
+    width: 55%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    letter-spacing: .02em;
+}
+
+#about .profile .cv:before,
+#skills .profile .code:before {
+    position: absolute;
+    top: 2em;
+    bottom: 2em;
+    left: .5em;
+    border-left: 3px dotted orange;
+    content: '';
+}
+
+#skills .background {
+    left: 30%;
+}
+
+#skills .profile .code {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3em 2em;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    width: calc(1 / 3 * 100%);
+}
+
+#skills .profile .code:first-of-type:before {
+    content: none;
+}
+
+#skills .profile .code img {
+    width: 6em;
+    margin-bottom: 1em;
+}
+
+#skills .profile .code b {
+    font-weight: bold;
+    color: orange;
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio h2 {
+    display: block;
+    text-align: center;
+    line-height: 1.6em;
+    padding: .3em 1.1em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#portfolio .portfolio_images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 0;
+}
+
+#portfolio .portfolio_bg {
+    position: relative;
+    flex-grow: 1;
+    background-position: top center;
+    background-size: cover;
+    width: 33%;
+    height: 28vh;
+}
+
+#portfolio .portfolio_bg .portfolio_bg_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding: 2em;
+}
+
+#portfolio .portfolio_bg .portfolio_bg_content h3 {
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+#portfolio .portfolio_bg .portfolio_bg_content p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+#portfolio .portfolio_bg .portfolio_bg_content .btn {
+    margin-top: 1em;
+}
+
+
+#contact {
+    background-color:  #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+    padding-bottom: 4em;
+    
+}
+#contact h2 {
+    display: block;
+    text-align: left;
+    width: 100%;
+    line-height: 1.6em;
+    padding: .3em 1.1em;
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 10%;
+}
+
+.mailcontent {
+    width: 80%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7em;
+}
+.adres {
+    background-color: rgba(255, 169, 10, 0.925);
+   flex-basis: 40%;
+}
+
+.adres p {
+    line-height: 1.6em;
+    font-size: 2em;
+    padding: 15%;
+    color: white;
+}
+.adres i {
+    font-size: 1em;
+    margin-top: 1em;
+    color: white;
+ 
+
+}
+.contactme {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    flex-basis: 60%;
+    padding: 5%;
+    box-sizing: border-box;
+    
+}
+
+.contactme .btn {
+    align-self: flex-end;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-top: 2em;
+    line-height: 2em;
+    font-size: 1.5em;
+
+}
+
+input {
+    width: 90%;
+    background-color: #ffffffc5;
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 2% 3%;
+    font-size: 0.9rem;
+    line-height: 2em;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 5px 5px silver;
+   
+}
+
+#message {
+    padding-bottom: 20%;
+}
+
+footer {
+    text-align: center;
+    padding: 2%;
+}
+
+.btn:hover {
+    background: white;
+    color: orange;
+    border: 1px solid orange;
+}
+
+@media (max-width: 790px) {
+   .mailcontent {
+        flex-direction: column;
+   }
+}   
+
+@media (max-width: 790px) {
+    .adres p {
+        padding: 5%;
+    }
+}
+
+
+@media (max-width: 340px) {
+    header a {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    #about .profile {
+        flex-wrap: wrap;
+    }
+
+    #about .profile > div {
+        flex-basis: 100%;
+    }
+
+    #skills .profile {
+        flex-wrap: wrap;
+    }
+
+    #skills .profile .code {
+        flex-basis: 100%;
+        padding: .7em;
+    }
+
+    #skills .profile .code:before {
+        content: none;
+    }
+}
+
+@media (max-width: 790px) {
+    body {
+        font-size: 10px;
+    }
+
+    header a {
+        flex-basis: 50%;
+    }
+
+    #logo h1 {
+        padding-top: 1.5em;
+        font-size: 5em;
+        line-height: 3em;
+    }
+
+    #logo span {
+        font-size: 2.4em;
+    }
+
+    #links p {
+        font-size: 2.2em;
+    }
+}
